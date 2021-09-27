@@ -15,7 +15,6 @@ body {
     box-shadow: inset 0 -75px 75px -25px rgba(0,0,0,.1);
     width: 500px;
     height: 500px;
-
   }
   .box-around-name-box{
       display: flex;
@@ -28,7 +27,7 @@ body {
     height: 150px;
     width: 150px;
     border-radius: 120px;
-    box-shadow: inset 0px 12px 14px -12px rgba(0,0,0,.1);
+    box-shadow: inset 0px 12px 14px -6px rgba(0,0,0,.1);
   }
   .site-name {
     margin: auto;
@@ -37,7 +36,6 @@ body {
   .box-around-box {
     display: flex;
     height: 50%;
-
   }
   .box-in-box {
     display: flex;
@@ -47,7 +45,19 @@ body {
     height: 120px;
     width: 120px;
     border-radius: 120px;
-    box-shadow: inset 0px 12px 14px -12px rgba(0,0,0,.1);
+    box-shadow: inset 0px 12px 14px -6px rgba(0,0,0,.1);
+    transition-property: box-shadow;
+    transition-duration: 0.5s;
+  }
+  .box-in-box:hover,.box-in-box:active {
+    display: flex;
+    margin: auto;
+    padding: 20px;
+    margin: 16px auto;
+    height: 120px;
+    width: 120px;
+    border-radius: 120px;
+    box-shadow: inset 0px -12px 14px 0px rgba(0,0,0,.1);
   }
   .box-links {
     margin: auto;
