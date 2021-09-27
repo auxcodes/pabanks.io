@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
   <head>
     <title>pabanks.io</title>
     <link rel="stylesheet" href="./style.css">
   </head>
 
-  <body>
+  <body id="canvas">
     <div class="site-name-container">
       <div class="box-around-name-box">
         <div class="name-box">
@@ -21,6 +21,21 @@
         </div>
       </div>
     </div>
+    <script>
+      const root = document.documentElement;
+      const mouseListener = document.querySelector("#canvas");
+      mouseListener.addEventListener("mousemove", event => {
+        let x = (0.5 - (event.clientX / innerWidth)) * 100;
+        let y = (0.5 - (event.clientY / innerHeight)) * 100;
+        root.style.setProperty('--mouse-x', x);
+        root.style.setProperty('--mouse-y', y);
+        console.log(x, y);
+      });
+      mouseListener.addEventListener("mouseleave", (e) => {
+        root.style.setProperty('--mouse-x', 0);
+        root.style.setProperty('--mouse-y', 75);
+      });
+    </script>
   </body>
 
 </html>

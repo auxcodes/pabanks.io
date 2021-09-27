@@ -1,3 +1,14 @@
+:root {
+    --mouse-x: 0;
+    --mouse-y: 75;
+    --x: calc(var(--mouse-x, 0) * 1.33px);
+    --y: calc(var(--mouse-y, 75) * 1.33px);
+    --neg-x: calc(var(--mouse-x, 0) * -1.33px);
+    --neg-y: calc(var(--mouse-y, 75) * -1.33px);
+    --nb-y: calc((var(--mouse-y) * 0.33) * 1px);
+    --nb-x: calc((var(--mouse-x) * 0.33) * 1px);
+  }
+
 body {
     margin: 0;
     padding: 0;
@@ -12,10 +23,12 @@ body {
     flex-direction: column;
     border-radius: 350px;
     padding: 100px;
-    box-shadow: inset 0 -75px 75px -25px rgba(0,0,0,0.25), 0 75px 75px -25px rgba(0,0,0,0.27);
     background-color: #f1f1f1;
     width: 500px;
     height: 500px;
+    box-shadow: inset var(--neg-x) var(--neg-y) 75px -25px rgba(0,0,0,0.25), var(--x) var(--y) 75px -25px rgba(0,0,0,0.27);
+    transition-property: box-shadow;
+    transition-duration: 0.25s;
   }
   .box-around-name-box{
       display: flex;
@@ -28,9 +41,9 @@ body {
     height: 150px;
     width: 150px;
     border-radius: 120px;
-    box-shadow: inset 0px 12px 14px -6px rgba(0,0,0,.1);
+    box-shadow: inset var(--nb-x) var(--nb-y) 14px -6px rgba(0,0,0,.1);
     transition-property: box-shadow;
-    transition-duration: 1s;
+    transition-duration: 0.25s;
   }
   .name-box:hover  {
     display: flex;
@@ -59,9 +72,9 @@ body {
     height: 120px;
     width: 120px;
     border-radius: 120px;
-    box-shadow: inset 0px 12px 14px -6px rgba(0,0,0,.1);
+    box-shadow: inset var(--nb-x) var(--nb-y) 14px -6px rgba(0,0,0,.1);
     transition-property: box-shadow;
-    transition-duration: 1s;
+    transition-duration: 0.25s;
   }
   .box-in-box:hover,.box-in-box:active {
     display: flex;
