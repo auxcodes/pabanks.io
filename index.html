@@ -29,7 +29,6 @@
         let y = (0.5 - (event.clientY / innerHeight)) * 100;
         root.style.setProperty('--mouse-x', x);
         root.style.setProperty('--mouse-y', y);
-        console.log(x, y);
       });
       mouseListener.addEventListener("mouseleave", (e) => {
         root.style.setProperty('--mouse-x', 0);
