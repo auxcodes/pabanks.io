@@ -1,10 +1,10 @@
 :root {
     --mouse-x: 0;
     --mouse-y: 75;
-    --x: calc(var(--mouse-x, 0) * 1.33px);
-    --y: calc(var(--mouse-y, 75) * 1.33px);
-    --neg-x: calc(var(--mouse-x, 0) * -1.33px);
-    --neg-y: calc(var(--mouse-y, 75) * -1.33px);
+    --x: calc(var(--mouse-x, 0) * 3px);
+    --y: calc(var(--mouse-y, 75) * 3px);
+    --neg-x: calc(var(--mouse-x, 0) * -3px);
+    --neg-y: calc(var(--mouse-y, 75) * -3px);
     --nb-y: calc((var(--mouse-y) * 0.33) * 1px);
     --nb-x: calc((var(--mouse-x) * 0.33) * 1px);
   }
@@ -13,6 +13,7 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
+    flex-direction: column;
     width: 100vw;
     height: 100vh;
     background-image: radial-gradient(ellipse, rgb(255, 255, 255) 20%, rgb(235, 235, 235) 38%, rgb(122, 122, 122) 100%);
@@ -95,3 +96,41 @@ body {
     font-weight: bold;
     color: #666;
   }
+  /* Footer Content */
+  .footer-content {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    text-align: center;
+    font-weight: 700;
+    color: #333;
+  }
+  .footer-content .copyright {
+      margin: auto 0 auto auto;
+      display: flex;
+      cursor: pointer;
+      text-decoration: none;
+      color: #333;
+  }
+  .footer-content .copyright .logo {
+        display: block;
+        background-image: url('./assets/aux-logo-centered.svg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        margin: 2px 0 0 2px;
+        width: 20px;
+        height: 20px;
+  }
+  .footer-content .copyright .text {
+    margin: auto;
+  }
+  .footer-content .github-link {
+      display: flex;
+  }
+  .footer-content .github-link .octicon {
+        height: 35px;
+        width: 35px;
+        margin: auto 10px auto auto;
+        fill: #333;
+  }
+  
